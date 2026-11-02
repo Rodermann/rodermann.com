@@ -3,27 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Marcus Rodermann – Unternehmensberater | rodermann.com</title>
-  <meta name="description" content="Dr. Marcus Rodermann – Selbständiger Unternehmensberater für den Mittelstand. Spezialist für Digitalisierung, Geschäftsmodellentwicklung und Führung. Ehemals CEO Lidl Digital, Geschäftsführer Heine, Bertelsmann, Payback." />
+  <title>Dr. Marcus Rodermann – Interim Manager und Unternehmensberater | rodermann.com</title>
+  <meta name="description" content="Dr. Marcus Rodermann – Interim Manager und Unternehmensberater. Turnaround, operative Unternehmensführung und Transformation. Zuvor CEO Lidl Digital, Geschäftsführer Heine, Bertelsmann." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
   <link rel="canonical" href="https://rodermann.com/" />
-  <meta property="og:title" content="Dr. Marcus Rodermann – Unternehmensberater" />
-  <meta property="og:description" content="Selbständiger Unternehmensberater für den Mittelstand. Spezialist für Digitalisierung und Geschäftsmodellentwicklung." />
+  <meta property="og:title" content="Dr. Marcus Rodermann – Interim Manager und Unternehmensberater" />
+  <meta property="og:description" content="Wenn aus Entscheidungen Ergebnisse werden müssen: Turnaround, operative Unternehmensführung und Transformation." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rodermann.com/" />
+  <meta property="og:image" content="https://rodermann.com/rodermann-portrait.jpg" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Dr. Marcus Rodermann – Unternehmensberater" />
-  <meta name="twitter:description" content="Selbständiger Unternehmensberater für den Mittelstand. Spezialist für Digitalisierung und Geschäftsmodellentwicklung." />
+  <meta name="twitter:title" content="Dr. Marcus Rodermann – Interim Manager und Unternehmensberater" />
+  <meta name="twitter:description" content="Wenn aus Entscheidungen Ergebnisse werden müssen: Turnaround, operative Unternehmensführung und Transformation." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Dr. Marcus Rodermann",
-    "jobTitle": "Unternehmensberater",
+    "jobTitle": "Interim Manager und Unternehmensberater",
     "url": "https://rodermann.com",
-    "email": "marcus@rodermann.com",
+    "image": "https://rodermann.com/rodermann-portrait.jpg",
+    "email": "marcus\u0040rodermann.com",
     "telephone": "+4915127051000",
     "address": {
       "@type": "PostalAddress",
@@ -34,10 +36,12 @@
     },
     "sameAs": [
       "https://www.linkedin.com/in/mrodermann/",
-      "https://www.xing.com/profile/Marcus_Rodermann/"
+      "https://www.xing.com/profile/Marcus_Rodermann/",
+      "https://managerportal.ddim.de/member/1BC7513A-7821-4E7B-9162-F1EAC6548D98/marcus_rodermann.html"
     ]
   }
   </script>
+
   <style>
     :root {
       --black:    #0a0a0a;
@@ -82,7 +86,8 @@
       z-index: 100;
     }
 
-    nav {
+    /* NAV */
+    nav.main-nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 50;
@@ -103,48 +108,95 @@
       text-transform: uppercase;
       color: var(--ink);
       text-decoration: none;
+      white-space: nowrap;
     }
 
-    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
 
     .nav-links a {
       font-family: var(--ff-head);
       font-size: 10px;
       font-weight: 500;
-      letter-spacing: .22em;
+      letter-spacing: .2em;
       text-transform: uppercase;
       color: var(--muted);
       text-decoration: none;
       transition: color .2s;
+      white-space: nowrap;
     }
 
     .nav-links a:hover { color: var(--ink); }
 
+    /* GENERIC SECTION GRID */
     section {
-      min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      scroll-margin-top: 72px;
     }
 
-    #hero { padding-top: 88px; }
-
-    .hero-left {
-      padding: 100px 64px 80px 72px;
+    .panel-l {
+      padding: 96px 64px 88px 72px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+    }
+
+    .panel-r {
+      padding: 96px 64px 88px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .section-label {
+      font-family: var(--ff-head);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 28px;
+      opacity: .6;
+    }
+
+    section h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+      font-weight: 300;
+      letter-spacing: -.01em;
+      line-height: 1.15;
+      margin-bottom: 32px;
+    }
+
+    section h2 strong { font-weight: 700; }
+
+    .body-text p {
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+      max-width: 470px;
+    }
+
+    .body-text p:last-child { margin-bottom: 0; }
+
+    /* HERO */
+    #hero { min-height: 100vh; padding-top: 88px; }
+
+    #hero .panel-l {
       border-right: 1px solid var(--rule);
       animation: fadeUp .9s var(--ease) both;
     }
+
+    #hero .panel-r { animation: fadeUp .9s var(--ease) .15s both; }
 
     .logo-mark {
       font-family: var(--ff-head);
       font-size: 10px;
       font-weight: 500;
-      letter-spacing: .28em;
+      letter-spacing: .24em;
       text-transform: uppercase;
       color: var(--ink);
-      margin-bottom: 64px;
+      margin-bottom: 56px;
       opacity: .7;
     }
 
@@ -187,36 +239,27 @@
       width: 48px;
       height: 1px;
       background: var(--ink);
-      margin: 40px 0;
+      margin: 36px 0;
       transform-origin: left;
       animation: growLine 1.2s var(--ease) .3s both;
+    }
+
+    .hero-headline {
+      font-family: var(--ff-head);
+      font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -.01em;
+      color: var(--ink);
+      max-width: 430px;
+      margin-bottom: 18px;
     }
 
     .hero-tagline {
       font-size: 15px;
       line-height: 1.75;
       color: var(--text);
-      max-width: 400px;
-      font-style: italic;
-    }
-
-    .hero-right {
-      padding: 100px 64px 80px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      animation: fadeUp .9s var(--ease) .15s both;
-    }
-
-    .section-label {
-      font-family: var(--ff-head);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: .3em;
-      text-transform: uppercase;
-      color: var(--ink);
-      margin-bottom: 28px;
-      opacity: .6;
+      max-width: 440px;
     }
 
     .contact-list {
@@ -224,14 +267,14 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      margin-bottom: 52px;
+      margin-bottom: 48px;
     }
 
     .contact-list li { display: flex; flex-direction: column; gap: 4px; }
 
     .c-label { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #999; }
 
-    .contact-list a, .contact-list span {
+    .contact-list a {
       font-family: var(--ff-head);
       font-size: 16px;
       font-weight: 400;
@@ -242,13 +285,13 @@
 
     .contact-list a:hover { color: var(--ink); }
 
-    .social-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
+    .social-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
 
     .social-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 20px;
+      padding: 10px 18px;
       border: 1px solid var(--ink);
       color: var(--ink);
       font-family: var(--ff-head);
@@ -283,105 +326,148 @@
     .cta-link:hover { background: var(--black); gap: 18px; }
     .cta-link svg { width: 13px; height: 13px; fill: currentColor; }
 
-    /* BERATUNG */
-    #beratung { background: var(--ink); color: var(--white); }
+    .cta-link.on-dark { background: var(--white); color: var(--ink); }
+    .cta-link.on-dark:hover { background: #fff; }
 
-    #beratung h2, #praxis h2 {
-      font-family: var(--ff-head);
-      font-size: clamp(1.6rem, 2.4vw, 2.4rem);
-      font-weight: 300;
-      letter-spacing: -.01em;
-      margin-bottom: 40px;
-      line-height: 1.15;
+    /* KENNZAHLEN */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      background: var(--white);
+      position: relative;
+      z-index: 2;
     }
 
-    #beratung h2 strong, #praxis h2 strong { font-weight: 700; }
-
-    .beratung-left {
-      padding: 100px 64px 80px 72px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border-right: 1px solid rgba(255,255,255,.12);
-    }
-
-    .beratung-left .section-label { color: rgba(255,255,255,.5); opacity: 1; }
-    .beratung-left h2 { color: var(--white); }
-
-    .beratung-text p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: rgba(255,255,255,.82);
-      margin-bottom: 16px;
-      max-width: 440px;
-    }
-
-    .beratung-text p:last-child { margin-bottom: 0; }
-    .highlight-phrase { color: var(--white); font-style: italic; }
-
-    .beratung-right {
-      padding: 100px 64px 80px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .beratung-right .section-label { color: rgba(255,255,255,.5); opacity: 1; }
-    .key-points { display: flex; flex-direction: column; gap: 32px; }
-    .key-point { display: flex; gap: 20px; align-items: flex-start; }
-
-    .kp-num {
-      font-family: var(--ff-head);
-      font-size: 11px;
-      font-weight: 700;
-      color: rgba(255,255,255,.3);
-      letter-spacing: .1em;
-      padding-top: 3px;
-      flex-shrink: 0;
-      width: 28px;
-    }
-
-    .kp-title {
-      font-family: var(--ff-head);
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--white);
-      letter-spacing: .04em;
-      margin-bottom: 6px;
-    }
-
-    .kp-desc { font-size: 13px; line-height: 1.65; color: rgba(255,255,255,.65); }
-
-    /* PRAXIS */
-    #praxis { background: var(--white); }
-
-    .praxis-left {
-      padding: 100px 64px 80px 72px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .stat {
+      padding: 36px 32px 36px 40px;
       border-right: 1px solid var(--rule);
     }
 
-    .praxis-left .section-label { opacity: .6; }
-    .praxis-left h2 { color: var(--black); margin-bottom: 20px; }
+    .stat:first-child { padding-left: 72px; }
+    .stat:last-child { border-right: none; }
 
-    .praxis-intro { font-size: 15px; line-height: 1.75; color: var(--text); max-width: 400px; }
-
-    .praxis-right {
-      padding: 100px 64px 80px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .stat-value {
+      font-family: var(--ff-head);
+      font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+      font-weight: 300;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      line-height: 1.1;
+      margin-bottom: 10px;
     }
+
+    .stat-label { font-size: 13px; line-height: 1.55; color: var(--muted); max-width: 240px; }
+
+    /* DARK SECTIONS */
+    .dark { background: var(--ink); color: var(--white); }
+    .dark .section-label { color: rgba(255,255,255,.5); opacity: 1; }
+    .dark h2 { color: var(--white); }
+    .dark .body-text p { color: rgba(255,255,255,.82); }
+    .dark .panel-l { border-right: 1px solid rgba(255,255,255,.12); }
+
+    .mandat-meta {
+      font-family: var(--ff-head);
+      font-size: 12px;
+      letter-spacing: .06em;
+      color: rgba(255,255,255,.6);
+      margin: -12px 0 28px 0;
+      max-width: 470px;
+      line-height: 1.6;
+    }
+
+    .result-list { display: flex; flex-direction: column; }
+
+    .result {
+      padding: 22px 0;
+      border-top: 1px solid rgba(255,255,255,.14);
+    }
+
+    .result:last-of-type { border-bottom: 1px solid rgba(255,255,255,.14); }
+
+    .result-title {
+      font-family: var(--ff-head);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: .02em;
+      margin-bottom: 6px;
+    }
+
+    .result-desc { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,.7); max-width: 470px; }
+
+    .nomination {
+      margin-top: 32px;
+      padding: 16px 20px;
+      border: 1px solid rgba(255,255,255,.28);
+      font-family: var(--ff-head);
+      font-size: 12px;
+      line-height: 1.6;
+      letter-spacing: .04em;
+      color: rgba(255,255,255,.88);
+      max-width: 470px;
+    }
+
+    .after-note { margin-top: 14px; font-size: 13px; line-height: 1.6; color: rgba(255,255,255,.55); max-width: 470px; }
+
+    .quote-row {
+      grid-column: 1 / -1;
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding: 64px 72px 80px 72px;
+    }
+
+    blockquote {
+      font-family: var(--ff-head);
+      font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+      font-weight: 300;
+      line-height: 1.55;
+      letter-spacing: -.005em;
+      color: var(--white);
+      max-width: 880px;
+    }
+
+    .cite {
+      margin-top: 24px;
+      font-family: var(--ff-head);
+      font-size: 12px;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.6);
+    }
+
+    .cite strong { color: rgba(255,255,255,.9); font-weight: 600; }
+
+    /* LEISTUNGEN (light) */
+    .service {
+      padding: 24px 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .service:last-child { border-bottom: 1px solid var(--rule); }
+
+    .service-title {
+      font-family: var(--ff-head);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .service-desc { font-size: 14px; line-height: 1.7; color: var(--muted); max-width: 480px; }
+
+    .intro-text { font-size: 15px; line-height: 1.8; color: var(--text); max-width: 440px; }
+
+    /* ERFAHRUNG */
+    .light-text p { font-size: 15px; line-height: 1.8; color: var(--text); margin-bottom: 16px; max-width: 460px; }
+    .light-text p:last-child { margin-bottom: 0; }
 
     .career-list { display: flex; flex-direction: column; }
 
     .career-item {
       display: grid;
-      grid-template-columns: 80px 1fr;
+      grid-template-columns: 84px 1fr;
       gap: 0 24px;
-      padding: 28px 0;
+      padding: 20px 0;
       border-bottom: 1px solid var(--rule);
     }
 
@@ -401,26 +487,53 @@
       font-weight: 600;
       color: var(--black);
       margin-bottom: 4px;
+      line-height: 1.35;
     }
 
-    .career-company { font-size: 13px; color: var(--muted); }
+    .career-company { font-size: 13px; line-height: 1.55; color: var(--muted); }
 
-    /* FOOTER */
-    footer {
+    .education { margin-top: 28px; font-size: 13px; line-height: 1.7; color: var(--muted); }
+    .education strong { color: var(--ink); font-weight: 600; }
+
+    /* CLOSING BAND */
+    .closing {
+      background: var(--ink);
+      color: var(--white);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 24px 52px 24px 72px;
-      border-top: 1px solid var(--rule);
-      background: var(--white);
+      gap: 40px;
+      padding: 72px 72px;
+      scroll-margin-top: 72px;
     }
 
-    .footer-copy {
+    .closing h2 {
       font-family: var(--ff-head);
-      font-size: 11px;
-      color: #aaa;
-      letter-spacing: .1em;
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 300;
+      letter-spacing: -.01em;
+      line-height: 1.2;
+      margin-bottom: 14px;
     }
+
+    .closing h2 strong { font-weight: 700; }
+
+    .closing p { font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.7; }
+    .closing p a { color: var(--white); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.35); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 24px 52px 24px 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white);
+      position: relative;
+      z-index: 200;
+    }
+
+    .footer-copy { font-family: var(--ff-head); font-size: 11px; color: #8a8a8a; letter-spacing: .1em; }
 
     .footer-nav { display: flex; gap: 28px; }
 
@@ -451,6 +564,13 @@
       z-index: 50;
     }
 
+    a:focus-visible, .cta-link:focus-visible, .social-btn:focus-visible {
+      outline: 2px solid var(--ink-mid);
+      outline-offset: 3px;
+    }
+
+    .dark a:focus-visible, .closing a:focus-visible { outline-color: #fff; }
+
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(22px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -461,21 +581,90 @@
       to   { transform: scaleX(1); }
     }
 
-    @media (max-width: 820px) {
-      section { grid-template-columns: 1fr; min-height: auto; }
-      nav { padding: 18px 32px 18px 40px; }
-      .nav-links { gap: 20px; }
-      .hero-left, .hero-right,
-      .beratung-left, .beratung-right,
-      .praxis-left, .praxis-right {
-        padding: 72px 32px 56px 40px;
-        border-right: none;
-        border-bottom: 1px solid var(--rule);
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+
+    /* MID WIDTH */
+    @media (max-width: 1180px) {
+      .nav-links { gap: 18px; }
+      nav.main-nav { padding-right: 36px; }
+    }
+
+    /* MOBILE / TABLET */
+    @media (max-width: 920px) {
+      nav.main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px 24px 12px 32px;
       }
-      #beratung .beratung-left { border-bottom: 1px solid rgba(255,255,255,.12); }
-      footer { padding: 20px 32px 20px 40px; flex-direction: column; gap: 12px; align-items: flex-start; }
+
+      .nav-links { flex-wrap: wrap; gap: 6px 16px; }
+
+      section { grid-template-columns: 1fr; scroll-margin-top: 96px; }
+      #hero { padding-top: 120px; min-height: auto; }
+
+      .panel-l, .panel-r { padding: 56px 28px 48px 36px; }
+
+      #hero .panel-l { border-right: none; border-bottom: 1px solid var(--rule); }
+      .dark .panel-l { border-right: none; border-bottom: 1px solid rgba(255,255,255,.12); }
+
+      .stats { grid-template-columns: 1fr 1fr; }
+      .stat, .stat:first-child { padding: 28px 24px 28px 36px; }
+      .stat:nth-child(2) { border-right: none; }
+      .stat:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
+
+      .quote-row { padding: 48px 28px 56px 36px; }
+
+      .closing { flex-direction: column; align-items: flex-start; padding: 56px 28px 56px 36px; scroll-margin-top: 96px; }
+
+      footer { padding: 20px 28px 20px 36px; flex-direction: column; gap: 12px; align-items: flex-start; }
+
       .domain-watermark { display: none; }
       .ink-bar { width: 3px; }
+    }
+
+    /* PORTRAIT */
+    .hero-id {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 44px;
+    }
+
+    .hero-id .contact-list { margin-bottom: 0; }
+
+    .portrait {
+      position: relative;
+      isolation: isolate;
+      margin: 0;
+    }
+
+    .portrait::after {
+      content: "";
+      position: absolute;
+      inset: 12px -12px -12px 12px;
+      border: 1px solid var(--ink);
+      z-index: -1;
+    }
+
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 10%;
+      background: #e4e4e1;
+    }
+
+    .hero-id .contact-list a { overflow-wrap: anywhere; font-size: 15px; }
+
+    @media (max-width: 1180px) {
+      .hero-id { grid-template-columns: 1fr; gap: 36px; }
+      .portrait { width: 230px; }
     }
   </style>
 </head>
@@ -483,35 +672,44 @@
 
   <div class="ink-bar"></div>
 
-  <nav>
+  <nav class="main-nav" aria-label="Hauptnavigation">
     <a href="#hero" class="nav-brand">Dr. Marcus Rodermann</a>
     <ul class="nav-links">
-      <li><a href="#beratung">Beratung</a></li>
-      <li><a href="#praxis">Erfahrung</a></li>
+      <li><a href="#mandat">Mandat</a></li>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#leistungsernst">Leistungsernst</a></li>
+      <li><a href="#erfahrung">Erfahrung</a></li>
       <li><a href="#hero">Kontakt</a></li>
       <li><a href="impressum.html">Impressum</a></li>
       <li><a href="datenschutz.html">Datenschutz</a></li>
     </ul>
   </nav>
 
-  <!-- ① HERO -->
+  <!-- 1 EINSTIEG -->
   <section id="hero">
-    <div class="hero-left">
-      <p class="logo-mark">Rodermann Consulting</p>
+    <div class="panel-l">
+      <p class="logo-mark">Interim Management · Führung · Turnaround · Transformation</p>
       <div>
         <span class="title-prefix">Dr. rer. pol.</span>
         <h1>Marcus<br><strong>Rodermann</strong></h1>
-        <p class="role">Unternehmensberater</p>
+        <p class="role">Interim Manager · Unternehmensberater</p>
         <p class="quals">Diplom-Kaufmann · MBA (USA)</p>
       </div>
       <div class="hero-divider"></div>
+      <p class="hero-headline">Wenn aus Entscheidungen Ergebnisse werden müssen.</p>
       <p class="hero-tagline">
-        Seit 2022 unterstütze ich mittelständische Unternehmen bei der
-        Weiterentwicklung ihrer Geschäftsmodelle.
+        Ich übernehme Verantwortung, wenn Unternehmen vor schwierigen Aufgaben stehen.
+        Ich schaue genau hin, spreche Probleme offen an und sorge dafür, dass nicht nur
+        Entscheidungen getroffen werden, sondern auch etwas passiert.
       </p>
     </div>
 
-    <div class="hero-right">
+    <div class="panel-r">
+      <div class="hero-id">
+        <figure class="portrait">
+          <img src="rodermann-portrait.jpg" width="900" height="1125" alt="Dr. Marcus Rodermann, Interim Manager und Unternehmensberater" />
+        </figure>
+        <div>
       <p class="section-label">Kontakt</p>
       <ul class="contact-list">
         <li>
@@ -524,11 +722,13 @@
         </li>
         <li>
           <span class="c-label">Web</span>
-          <a href="https://www.rodermann.com">www.rodermann.com</a>
+          <a href="https://rodermann.com">rodermann.com</a>
         </li>
       </ul>
+        </div>
+      </div>
 
-      <p class="section-label">Netzwerk</p>
+      <p class="section-label">Profile</p>
       <div class="social-row">
         <a href="https://www.linkedin.com/in/mrodermann/" target="_blank" rel="noopener" class="social-btn">
           <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -537,6 +737,9 @@
         <a href="https://www.xing.com/profile/Marcus_Rodermann/" target="_blank" rel="noopener" class="social-btn">
           <svg viewBox="0 0 24 24"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.254.221.465.221h3.445c.517 0 .744-.33.927-.665l3.734-6.609-2.378-4.155c-.172-.315-.434-.633-.962-.633H3.648v.001z"/></svg>
           XING
+        </a>
+        <a href="https://managerportal.ddim.de/member/1BC7513A-7821-4E7B-9162-F1EAC6548D98/marcus_rodermann.html" target="_blank" rel="noopener" class="social-btn">
+          DDIM-Profil
         </a>
       </div>
 
@@ -547,121 +750,270 @@
     </div>
   </section>
 
-  <!-- ② BERATUNGSSCHWERPUNKTE -->
-  <section id="beratung">
-    <div class="beratung-left">
-      <p class="section-label">Beratungsschwerpunkte</p>
-      <h2><strong>Digitale Transformation</strong><br>für den Mittelstand</h2>
-      <div class="beratung-text">
+  <!-- KENNZAHLEN -->
+  <div class="stats">
+    <div class="stat">
+      <p class="stat-value">über 25 Jahre</p>
+      <p class="stat-label">Unternehmen und Geschäftsbereiche geführt, als Geschäftsleitung, Geschäftsführer und Vorstand</p>
+    </div>
+    <div class="stat">
+      <p class="stat-value">4 Monate</p>
+      <p class="stat-label">vom Liquidationskandidaten zurück in die schwarzen Zahlen (CPITS)</p>
+    </div>
+    <div class="stat">
+      <p class="stat-value">ca. 1,5 Mrd. €</p>
+      <p class="stat-label">Umsatz bei Lidl Digital, sieben Länder, zeitweise über 50 % Wachstum pro Jahr</p>
+    </div>
+    <div class="stat">
+      <p class="stat-value">Nominiert</p>
+      <p class="stat-label">DDIM.projekt // Interim Management Excellence Award 2026</p>
+    </div>
+  </div>
+
+  <!-- 2 MANDAT CPITS -->
+  <section id="mandat" class="dark">
+    <div class="panel-l">
+      <p class="section-label">Mandat</p>
+      <h2><strong>Vom Liquidations&shy;kandidaten</strong><br>zum profitablen IT-Service&shy;unternehmen</h2>
+      <p class="mandat-meta">Cyberport IT-Services GmbH (CPITS) · Interimistische Geschäftsleitung · Turnaround in vier Monaten</p>
+      <div class="body-text">
         <p>
-          Basis meiner Arbeit ist die jahrzehntelange Praxiserfahrung als Mitglied der
-          Geschäftsleitung, als Geschäftsführer und als Vorstand von Benchmark-Unternehmen wie
-          <span class="highlight-phrase">Bertelsmann, Payback, Otto und Lidl.</span>
+          Die CPITS, die IT-Servicegesellschaft der Cyberport SE mit rund 50 Mitarbeitern und
+          rund 10 Mio. € Umsatz, war nach mehreren verlustreichen Jahren wirtschaftlich unter Druck
+          geraten. Die Techniker waren zu 56 % ausgelastet, die Umsatzrendite lag bei rund –10 %.
+          Eine Liquidation war eine reale Handlungsoption.
         </p>
         <p>
-          Mein besonderer Schwerpunkt liegt in den digitalen Technologien, die den Wettbewerb
-          in fast jeder Branche verändert haben und weiter verändern.
+          Ich habe die interimistische Geschäftsleitung mit operativer und wirtschaftlicher
+          Verantwortung übernommen. Mein Führungsprinzip war Leistungsernst: Was wir für richtig
+          erkannt und beschlossen hatten, musste auch wirklich geschehen – konsequent, täglich und
+          wenn nötig bis ins Detail.
         </p>
         <p>
-          Die Besonderheit meiner Beratungsleistung besteht darin, dass ich ausschließlich in
-          Themen berate, in denen ich nicht nur über das notwendige strategische Wissen verfüge,
-          sondern in denen ich mich aus eigener, langjähriger Unternehmenspraxis wirklich auskenne.
-        </p>
-        <p>
-          Als Ergebnis kann ich meinen Klienten oftmals die <span class="highlight-phrase">„vermeidbare
-          Extrameile"</span> ersparen.
+          Maßnahmen: Transparenz über Ergebnis und Auslastung, tägliche Dailys und wöchentliche
+          Retros, verbindliche Checklisten und Standards, ein klar definiertes Serviceportfolio mit
+          einheitlichem Pricing – und konsequentes Nachfassen, bis Probleme gelöst waren.
         </p>
       </div>
     </div>
 
-    <div class="beratung-right">
-      <p class="section-label">Leistungen</p>
-      <div class="key-points">
-        <div class="key-point">
-          <span class="kp-num">01</span>
-          <div>
-            <p class="kp-title">Bestehende Geschäfte stärken</p>
-            <p class="kp-desc">Mit digitalen Technologien vorhandene Stärken ausbauen und die Wettbewerbsposition sichern.</p>
-          </div>
+    <div class="panel-r">
+      <p class="section-label">Ergebnisse</p>
+      <div class="result-list">
+        <div class="result">
+          <p class="result-title">Zurück in der Profitabilität</p>
+          <p class="result-desc">Umsatzrendite von rund –10 % auf rund +5 %. Seit Oktober 2025 schreibt die CPITS durchgehend schwarze Zahlen, auch 2026.</p>
         </div>
-        <div class="key-point">
-          <span class="kp-num">02</span>
-          <div>
-            <p class="kp-title">Neue digitale Aktivitäten beginnen</p>
-            <p class="kp-desc">Digitale Geschäftsmodelle entwickeln und neue Wachstumsfelder erschließen.</p>
-          </div>
+        <div class="result">
+          <p class="result-title">Mehr Produktivität</p>
+          <p class="result-desc">Auslastung der technischen Mitarbeiter von 56 % auf über 75 %. Abrechenbare Stunden je Techniker und Woche von 22,4 auf rund 30.</p>
         </div>
-        <div class="key-point">
-          <span class="kp-num">03</span>
-          <div>
-            <p class="kp-title">Digitalisierungsstrategien entwickeln</p>
-            <p class="kp-desc">Von der Strategie bis zur operativen Realisierung konkreter Projekte – aus einer Hand.</p>
-          </div>
+        <div class="result">
+          <p class="result-title">Verbindlicher Kundenservice</p>
+          <p class="result-desc">Auf jedes neue Kundenserviceticket wird innerhalb von 24 Stunden reagiert. Der Standard ist inzwischen in den Kunden-SLAs festgeschrieben.</p>
         </div>
-        <div class="key-point">
-          <span class="kp-num">04</span>
-          <div>
-            <p class="kp-title">Stärken des Bestehenden verbinden</p>
-            <p class="kp-desc">Das Bewährte mit den notwendigen Neuerungen zu einem stimmigen Ganzen verknüpfen.</p>
-          </div>
+        <div class="result">
+          <p class="result-title">Mannschaft gehalten</p>
+          <p class="result-desc">Kein Mitarbeiter verloren, den das Unternehmen halten wollte. Die Liquidation ist vom Tisch, die CPITS steht wirtschaftlich wieder auf eigenen Beinen.</p>
         </div>
+      </div>
+
+      <p class="nomination">Nominiert: DDIM.projekt // Interim Management Excellence Award 2026</p>
+      <p class="after-note">Nach der intensiven Turnaround-Phase von Juni bis Dezember 2025 begleite ich die CPITS mit reduziertem Zeitumfang weiter.</p>
+    </div>
+
+    <div class="quote-row">
+      <blockquote>
+        „Dr. Rodermann hat in einer für CPITS kritischen Situation die operative Verantwortung
+        übernommen und innerhalb weniger Monate den wirtschaftlichen Turnaround erreicht.
+        Besonders hervorzuheben ist, dass die Ergebnisverbesserung nicht primär durch
+        Kostensenkungen, sondern durch eine deutliche Steigerung von Produktivität,
+        Servicequalität und operativer Leistungsfähigkeit erreicht wurde. Nach der intensiven
+        Turnaround-Phase haben wir die Zusammenarbeit bewusst mit reduziertem Zeitumfang
+        fortgesetzt.“
+      </blockquote>
+      <p class="cite"><strong>Dr. Stefan Köhler</strong> · Geschäftsführer und CFO, Cyberport SE</p>
+    </div>
+  </section>
+
+  <!-- 3 LEISTUNGEN -->
+  <section id="leistungen">
+    <div class="panel-l">
+      <p class="section-label">Was ich übernehme</p>
+      <h2>Verantwortung,<br><strong>wenn es schwierig wird</strong></h2>
+      <p class="intro-text">
+        Ich übernehme Mandate, bei denen Unternehmen schnell wieder auf Kurs gebracht werden
+        müssen: wenn Ergebnisse nicht stimmen, wenn Strukturen nicht funktionieren oder wenn
+        notwendige Veränderungen umgesetzt werden müssen.
+      </p>
+    </div>
+
+    <div class="panel-r">
+      <div class="service">
+        <p class="service-title">Interim-Geschäftsführung</p>
+        <p class="service-desc">Interim CEO, General Manager, COO oder CIO, mit operativer und wirtschaftlicher Verantwortung für Ergebnis, Tagesgeschäft und Mitarbeiterführung.</p>
+      </div>
+      <div class="service">
+        <p class="service-title">Turnaround und Leistungsverbesserung</p>
+        <p class="service-desc">Transparenz über die tatsächliche Leistung schaffen, Verantwortlichkeiten klären, Erwartungen formulieren und konsequent nachfassen, bis es läuft.</p>
+      </div>
+      <div class="service">
+        <p class="service-title">Aufbau und Transformation</p>
+        <p class="service-desc">Aufbau und internationale Skalierung von Geschäftsmodellen, Neuaufstellung großer Organisationen, komplexe Transformationsprogramme. Digitale Geschäftsmodelle, E-Commerce und IT-Strategie kenne ich aus eigener Praxis.</p>
+      </div>
+      <div class="service">
+        <p class="service-title">Begleitung von Vorständen und Geschäftsführungen</p>
+        <p class="service-desc">Ergänzend unterstütze ich bei Veränderungen, besonders an der Schnittstelle von Führung, Organisation und IT.</p>
       </div>
     </div>
   </section>
 
-  <!-- ③ UNTERNEHMENSPRAXIS -->
-  <section id="praxis">
-    <div class="praxis-left">
-      <p class="section-label">Unternehmenspraxis</p>
-      <h2>Führungserfahrung in<br><strong>Benchmark-Unternehmen</strong></h2>
-      <p class="praxis-intro">
-        Über 25 Jahre als Mitglied der Geschäftsleitung, Geschäftsführer und Vorstand in
-        namhaften deutschen und internationalen Unternehmen – diese Praxis ist die Grundlage
-        jeder Beratungsleistung.
-      </p>
+  <!-- 4 LEISTUNGSERNST -->
+  <section id="leistungsernst" class="dark">
+    <div class="panel-l">
+      <p class="section-label">Haltung</p>
+      <h2><strong>Leistungsernst</strong></h2>
+      <div class="body-text">
+        <p>
+          Ich verstehe mich nicht als klassischer Strategieberater. Entscheidend ist für mich,
+          dass aus Entscheidungen Ergebnisse werden. Diesen Führungsansatz nenne ich Leistungsernst.
+        </p>
+      </div>
     </div>
 
-    <div class="praxis-right">
+    <div class="panel-r">
+      <div class="body-text">
+        <p>
+          Leistungsernst ist kein Tool und keine Technik, sondern eine Haltung: Was für richtig
+          erkannt und beschlossen ist, muss auch geschehen.
+        </p>
+        <p>
+          Leistung wird gemessen, Abweichungen werden nicht schöngeredet, Probleme nicht
+          wegmoderiert. Wo es nicht läuft, wird nachgefasst und eingegriffen, bis es läuft.
+        </p>
+      </div>
+      <a href="https://leistungsernst.de" target="_blank" rel="noopener" class="cta-link on-dark" style="margin-top:32px;">
+        Zu leistungsernst.de
+        <svg viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176H0v3.989h16.354l-6.176 6.176L13.025 23 24 12z"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- 5 ERFAHRUNG -->
+  <section id="erfahrung">
+    <div class="panel-l">
+      <p class="section-label">Erfahrung</p>
+      <h2>Über 25 Jahre<br><strong>Unternehmensführung</strong></h2>
+      <div class="light-text">
+        <p>
+          Ich habe Geschäfte in sehr unterschiedlichen Größenordnungen geführt. Bei Lidl Digital
+          ging es um rund 1,5 Mrd. € Umsatz, sieben Länder und zeitweise mehr als 50 % Wachstum im
+          Jahr. Bei Heine um ein Unternehmen mit rund 500 Mio. € Umsatz.
+        </p>
+        <p>
+          Ich kenne die Probleme, die entstehen, wenn ein Geschäft schneller wächst als seine
+          Organisation. Und ich kenne die andere Seite: wenn Umsätze wegbrechen, Prozesse nicht
+          funktionieren und man zunächst wieder Geld verdienen muss.
+        </p>
+        <p>
+          Digitale Technologien und Geschäftsmodelle kenne ich aus eigener Praxis. Noch wichtiger
+          ist mir, zu erkennen, was wirklich getan werden muss – und was man sich sparen kann.
+          Nicht jede Extrameile ist notwendig. Manche sind schlicht vermeidbar.
+        </p>
+      </div>
+    </div>
+
+    <div class="panel-r">
       <div class="career-list">
         <div class="career-item">
           <span class="career-years">2022–heute</span>
           <div>
-            <p class="career-role">Unternehmensberater für Unternehmer und CEOs im Mittelstand</p>
-            <p class="career-company">Selbständig · 4 Jahre</p>
+            <p class="career-role">Interim Manager und Unternehmensberater</p>
+            <p class="career-company">Selbständig · u. a. Turnaround CPITS</p>
           </div>
         </div>
         <div class="career-item">
-          <span class="career-years">2015–2021</span>
+          <span class="career-years">2018–2021</span>
           <div>
-            <p class="career-role">CEO Lidl Digital &amp; Bereichsvorstand Lidl International</p>
-            <p class="career-company">Schwarzgruppe · 6 Jahre</p>
+            <p class="career-role">CEO Lidl Digital und Bereichsvorstand Lidl International</p>
+            <p class="career-company">Schwarz Gruppe · ca. 1,5 Mrd. € Umsatz, sieben Länder</p>
+          </div>
+        </div>
+        <div class="career-item">
+          <span class="career-years">2015–2018</span>
+          <div>
+            <p class="career-role">Mitglied der Geschäftsleitung Kaufland, Leiter Kaufland Digital</p>
+            <p class="career-company">Schwarz Gruppe</p>
           </div>
         </div>
         <div class="career-item">
           <span class="career-years">2009–2015</span>
           <div>
-            <p class="career-role">Geschäftsführer Heine</p>
-            <p class="career-company">Ottogruppe · 6 Jahre</p>
+            <p class="career-role">Geschäftsführer Heine-Gruppe</p>
+            <p class="career-company">Otto Group · ca. 500 Mio. € Umsatz</p>
           </div>
         </div>
         <div class="career-item">
           <span class="career-years">2006–2009</span>
           <div>
-            <p class="career-role">Mitglied der Geschäftsleitung Payback</p>
-            <p class="career-company">Loyalty Partner · 3 Jahre</p>
+            <p class="career-role">Bereichsleiter Marketing, E-Commerce und Produktentwicklung</p>
+            <p class="career-company">Loyalty Partner (PAYBACK)</p>
           </div>
         </div>
         <div class="career-item">
-          <span class="career-years">1996–2006</span>
+          <span class="career-years">2002–2006</span>
           <div>
-            <p class="career-role">Mitglied der Geschäftsleitung Bertelsmann</p>
-            <p class="career-company">Bertelsmann AG · 10 Jahre</p>
+            <p class="career-role">Geschäftsführung Der Club und Mondolibri, Director France Loisirs</p>
+            <p class="career-company">Bertelsmann · Turnaround in Deutschland: Kosten ca. –30 % bei nahezu unverändertem Umsatz</p>
+          </div>
+        </div>
+        <div class="career-item">
+          <span class="career-years">1999–2002</span>
+          <div>
+            <p class="career-role">Vice President International, Gründungsteam</p>
+            <p class="career-company">Accompany Inc., San Francisco</p>
+          </div>
+        </div>
+        <div class="career-item">
+          <span class="career-years">1996–1999</span>
+          <div>
+            <p class="career-role">Assistent des Vorstandsvorsitzenden, Zentrale Unternehmensentwicklung</p>
+            <p class="career-company">Bertelsmann AG</p>
           </div>
         </div>
       </div>
+
+      <p class="education">
+        <strong>Ausbildung:</strong> Promotion zum Dr. rer. pol. (summa cum laude), Universität Trier ·
+        MBA, Clark University, Worcester (USA), DAAD-Stipendium
+      </p>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- SCHLUSSBAND -->
+  <div class="closing" id="kontakt">
+    <div>
+      <h2>Interesse an einem <strong>Gespräch?</strong></h2>
+      <p>
+        <a href="tel:+4915127051000">+49 151 270 51 000</a> ·
+        <a href="mailto:marcus&#64;rodermann.com">marcus&#64;rodermann.com</a>
+      </p>
+    </div>
+    <a href="mailto:marcus&#64;rodermann.com" class="cta-link on-dark">
+      Kontakt aufnehmen
+      <svg viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176H0v3.989h16.354l-6.176 6.176L13.025 23 24 12z"/></svg>
+    </a>
+  </div>
+
   <footer>
-    <span class="footer-copy">&copy; 2026 Dr. Marcus Rodermann
+    <span class="footer-copy">© 2026 Dr. Marcus Rodermann</span>
+    <nav class="footer-nav" aria-label="Rechtliches">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+  </footer>
+
+  <span class="domain-watermark">rodermann.com</span>
+
+</body>
+</html>
