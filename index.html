@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Marcus Rodermann – Interim Manager und Unternehmensberater | rodermann.com</title>
-  <meta name="description" content="Dr. Marcus Rodermann – Interim Manager und Unternehmensberater. Turnaround, operative Unternehmensführung und Transformation. Zuvor CEO Lidl Digital, Geschäftsführer Heine, Bertelsmann." />
+  <meta name="description" content="Dr. Marcus Rodermann – Interim Manager und Unternehmensberater. Ausgezeichnet mit dem DDIM Interim Management Excellence Award 2026 (Turnaround). Zuvor CEO Lidl Digital, Geschäftsführer Heine, Bertelsmann." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
@@ -23,6 +23,7 @@
     "@type": "Person",
     "name": "Dr. Marcus Rodermann",
     "jobTitle": "Interim Manager und Unternehmensberater",
+    "award": "DDIM.projekt // Interim Management Excellence Award 2026 (Kategorie Turnaround)",
     "url": "https://rodermann.com",
     "image": "https://rodermann.com/rodermann-portrait.jpg",
     "email": "marcus\u0040rodermann.com",
@@ -625,6 +626,79 @@
       .ink-bar { width: 3px; }
     }
 
+    /* AUSZEICHNUNG */
+    .award {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 36px;
+      max-width: 470px;
+    }
+
+    .award img { width: 150px; height: auto; flex: none; display: block; }
+
+    .award p {
+      font-family: var(--ff-head);
+      font-size: 13px;
+      line-height: 1.6;
+      letter-spacing: .03em;
+      color: rgba(255,255,255,.88);
+    }
+
+    .award p strong { color: #fff; font-weight: 600; }
+
+    .award-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 12px;
+      letter-spacing: .06em;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,.4);
+      transition: border-color .2s;
+    }
+
+    .award-link:hover { border-bottom-color: #fff; }
+
+    /* CASE STUDY */
+    .quote-row { padding-bottom: 56px; }
+
+    .casestudy-row {
+      grid-column: 1 / -1;
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding: 56px 72px 72px 72px;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .cs-thumb {
+      flex: none;
+      display: block;
+      width: 150px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.18), 0 18px 36px rgba(0,0,0,.35);
+    }
+
+    .cs-thumb img { display: block; width: 100%; height: auto; }
+
+    .cs-text .section-label { margin-bottom: 14px; }
+
+    .cs-title {
+      font-family: var(--ff-head);
+      font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.35;
+      color: var(--white);
+      max-width: 560px;
+      margin-bottom: 10px;
+    }
+
+    .cs-desc { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,.7); max-width: 520px; margin-bottom: 24px; }
+
+    @media (max-width: 920px) {
+      .casestudy-row { flex-direction: column; align-items: flex-start; gap: 28px; padding: 40px 28px 56px 36px; }
+    }
+
     /* PORTRAIT */
     .hero-id {
       display: grid;
@@ -765,8 +839,8 @@
       <p class="stat-label">Umsatz bei Lidl Digital, sieben Länder, zeitweise über 50 % Wachstum pro Jahr</p>
     </div>
     <div class="stat">
-      <p class="stat-value">Nominiert</p>
-      <p class="stat-label">DDIM.projekt // Interim Management Excellence Award 2026</p>
+      <p class="stat-value">Ausgezeichnet</p>
+      <p class="stat-label">DDIM.projekt // Interim Management Excellence Award 2026, Kategorie Turnaround</p>
     </div>
   </div>
 
@@ -818,7 +892,11 @@
         </div>
       </div>
 
-      <p class="nomination">Nominiert: DDIM.projekt // Interim Management Excellence Award 2026</p>
+      <div class="award">
+        <img src="ddim-award-2026-signet.png" width="360" height="360" alt="Signet DDIM.projekt 2026, Interim Management Excellence, Dr. Marcus Rodermann, Kategorie Turnaround" />
+        <p><strong>Ausgezeichnet:</strong> DDIM.projekt // Interim Management Excellence Award 2026, Kategorie Turnaround
+          <a href="https://lnkd.in/p/eUMi-ChH" target="_blank" rel="noopener" class="award-link">Beitrag der DDIM zur Preisverleihung (LinkedIn)</a></p>
+      </div>
       <p class="after-note">Nach der intensiven Turnaround-Phase von Juni bis Dezember 2025 begleite ich die CPITS mit reduziertem Zeitumfang weiter.</p>
     </div>
 
@@ -833,6 +911,21 @@
         fortgesetzt.“
       </blockquote>
       <p class="cite"><strong>Dr. Stefan Köhler</strong> · Geschäftsführer und CFO, Cyberport SE</p>
+    </div>
+
+    <div class="casestudy-row">
+      <a class="cs-thumb" href="rodermann-case-study-cpits.pdf" target="_blank" rel="noopener" aria-label="Case Study als PDF öffnen">
+        <img src="case-study-vorschau.jpg" width="440" height="623" alt="Titelseite der Case Study: Vom Liquidationskandidaten zum profitablen IT-Serviceunternehmen" loading="lazy" />
+      </a>
+      <div class="cs-text">
+        <p class="section-label">Case Study</p>
+        <p class="cs-title">Das Mandat im Detail: Ausgangslage, Maßnahmen und Ergebnisse</p>
+        <p class="cs-desc">Vier Seiten zum Turnaround der CPITS, von der DDIM zur Preisverleihung 2026 erstellt.</p>
+        <a href="rodermann-case-study-cpits.pdf" target="_blank" rel="noopener" class="cta-link on-dark">
+          Case Study als PDF öffnen
+          <svg viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176H0v3.989h16.354l-6.176 6.176L13.025 23 24 12z"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
